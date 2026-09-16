@@ -61,7 +61,7 @@ kicad_flow_compile      designPath=/ruta/design.ir.json target=manufacturing   #
 
 Targets en orden: `schematic` → `pcb` → `routed` → `manufacturing`. Cada etapa reutiliza la anterior si su fingerprint coincide; `forceRebuild` es explícito y destruye el progreso.
 
-Ejemplos de IR en [`examples/`](examples/), referencia de compilación en [`docs/`](docs/).
+Ejemplos de IR en [`examples/`](examples/), referencia de compilación en [`docs/`](docs/). El contrato operativo del agente que opera este plugin (reglas de STOP, protocolo de errores, modos NORMAL/DIAGNÓSTICO/REPAIR) está en [`docs/kicad-flow-agent.md`](docs/kicad-flow-agent.md).
 
 ## Un ejemplo real
 
