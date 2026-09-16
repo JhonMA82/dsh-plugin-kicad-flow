@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "project": {
+    "name": "rc-filter-demo",
+    "profile": "generic",
+    "description": "Small deterministic smoke-test schematic"
+  },
+  "blocks": ["input", "filter", "output"],
+  "components": [
+    {
+      "ref": "J1",
+      "symbol": "Connector_Generic:Conn_01x02",
+      "value": "INPUT",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "block": "input"
+    },
+    {
+      "ref": "R1",
+      "symbol": "Device:R",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "block": "filter"
+    },
+    {
+      "ref": "C1",
+      "symbol": "Device:C",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "block": "filter"
+    },
+    {
+      "ref": "J2",
+      "symbol": "Connector_Generic:Conn_01x02",
+      "value": "OUTPUT",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "block": "output"
+    }
+  ],
+  "nets": [
+    {
+      "name": "VIN",
+      "pins": [
+        { "ref": "J1", "pin": "1" },
+        { "ref": "R1", "pin": "1" }
+      ]
+    },
+    {
+      "name": "FILTERED",
+      "pins": [
+        { "ref": "R1", "pin": "2" },
+        { "ref": "C1", "pin": "1" },
+        { "ref": "J2", "pin": "1" }
+      ]
+    },
+    {
+      "name": "GND",
+      "global": true,
+      "pins": [
+        { "ref": "J1", "pin": "2" },
+        { "ref": "C1", "pin": "2" },
+        { "ref": "J2", "pin": "2" }
+      ]
+    }
+  ],
+  "board": {
+    "widthMm": 50,
+    "heightMm": 30,
+    "marginMm": 4,
+    "autoroute": true,
+    "routingAttempts": 3,
+    "gndPours": false,
+    "groundNet": "GND"
+  },
+  "manufacturing": {
+    "enabled": true,
+    "outputDir": "manufacturing"
+  }
+}

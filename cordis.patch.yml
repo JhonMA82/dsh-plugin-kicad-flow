@@ -1,0 +1,10 @@
+- insert:
+    - id: tool-kicad-flow
+      name: dsh-plugin-kicad-flow
+      config:
+        kicadMcpCommand: node
+        kicadMcpArgs:
+          - /home/juan/dev/Kicad/tools/KiCAD-MCP-Server/dist/index.js
+        projectDir: ./kicad-projects
+        freeroutingJar: /home/juan/dev/Kicad/tools/freerouting/freerouting.jar
+        exposeRawMcp: false
