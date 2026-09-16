@@ -33,7 +33,7 @@ Cualquier desviación → **STOP y reporte**. El plugin nunca repara, nunca rein
 - Conteos reales de tracks/vias en el resultado (fuente: reconciliación del board, no el router).
 - Manifest de fabricación con sha256 de cada archivo.
 
-Detalle completo por versión: [CHANGELOG.md](CHANGELOG.md) y `RELEASE-0.4.x.md`.
+Detalle completo por versión: [CHANGELOG.md](CHANGELOG.md) y `RELEASE-0.4.x.md`. Los límites de alcance (qué NO se implementa, por nivel): [ROADMAP.md](ROADMAP.md).
 
 ## Requisitos
 
